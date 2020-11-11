@@ -1,0 +1,36 @@
+﻿
+@model List<Equipment>
+@{
+    if (Model.Count > 0)
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Артикул</th>
+                    <th scope="col">Описание оборудования</th>
+                    <th scope="col">Цена</th>
+                    <th scope="col">“На складе”</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Equipment p in Model)
+                {
+                    <tr>
+                        <td>@p.VendorCode</td>
+                        <td>@p.Description</td>
+                        <td>@p.Cost</td>
+                        <td>@(p.OnWarehouse==true?"Да":"Нет")</td>
+                        <td>
+                            <a asp-action="GetInfo" asp-route-id="@p.Id">Инфо</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <h3>Нет данных</h3>
+    }
+}

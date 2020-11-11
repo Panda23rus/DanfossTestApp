@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Добавление оборудования";
+}
+@model List<Equipment>
+<div class="row">
+    <div class="col-5">
+        <form id="equipmentFrm">
+            <fieldset>
+                <div class="form-group">
+                    <label class="col-form-label col-form-label-lg" for="vendorcode">Артикул</label>
+                    <input class="form-control form-control-lg" placeholder="Артикул" type="text" name="vendorcode" id="vendorcode">
+                </div>
+                <div class="form-group">
+                    <label for="description">Описание</label>
+                    <textarea class="form-control" id="description" name="description" rows="5"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label col-form-label-lg" for="cost">Цена</label>
+                    <input class="form-control form-control-lg" type="number" placeholder="Цена" name="cost" id="cost">
+                </div>
+                <div class="form-group">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="onwarehouse" name="onwarehouse" checked="">
+                        <label class="custom-control-label" for="onwarehouse">На складе</label>
+                    </div>
+                </div>
+                <button class="btn btn-primary" type="button" id="btnsave">Save</button>
+            </fieldset>
+        </form>
+    </div>
+    <div class="col" id="list">
+       
+            @await Html.PartialAsync("List",Model)
+      
+    </div>
+</div>
+
+
+
+

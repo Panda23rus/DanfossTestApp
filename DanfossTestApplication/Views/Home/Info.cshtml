@@ -1,0 +1,73 @@
+﻿
+@model Equipment
+@{
+    <div>
+        <a asp-action="Index">Вернуться назад</a>
+    </div>
+    <h3>Информация по оборудованию @Model.VendorCode</h3>
+
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Примечания</h5>
+            @if (Model.Notes.Count() != 0)
+            {
+                <table class="table">
+                    @foreach (Note _note in Model.Notes)
+                    {
+                        <tr><td>@_note.Description</td></tr>
+                    }
+                </table>
+            }
+            else
+            {
+                <h3>Нет данных по примечаниям</h3>
+            }
+            <form asp-action="SaveNote">
+                <input type="hidden" asp-for="Id" />
+                <fieldset>
+                    <div class="form-group">
+                        <label for="description">Описание</label>
+                        <textarea class="form-control" id="description" name="description" rows="5"></textarea>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Add New</button>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Ссылки</h5>
+            @if (Model.Links.Count() != 0)
+            {
+                <table class="table">
+                    @foreach (Link _note in Model.Links)
+                    {
+                        <tr><td>@_note.URL</td><td>@_note.Name</td></tr>
+                    }
+                </table>
+
+            }
+            else
+            {
+                <h3>Нет данных по ссылкам</h3>
+            }
+            <form asp-action="SaveLink">
+                <input type="hidden" asp-for="Id" />
+                <fieldset>
+                    <div class="form-group">
+                        <label class="col-form-label col-form-label-lg" for="url">Url</label>
+                        <input class="form-control form-control-lg" placeholder="URL" type="text" name="url" id="url">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label col-form-label-lg" for="name">Название</label>
+                        <input class="form-control form-control-lg" placeholder="Название" type="text" name="name" id="name">
+                    </div>
+                    <button class="btn btn-primary" type="submit">Add New</button>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+
+}

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DanfossTestApplication", "DanfossTestApplication\DanfossTestApplication.csproj", "{FFAF1C93-8381-40D7-8C41-A80988B3FDC5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FFAF1C93-8381-40D7-8C41-A80988B3FDC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFAF1C93-8381-40D7-8C41-A80988B3FDC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFAF1C93-8381-40D7-8C41-A80988B3FDC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFAF1C93-8381-40D7-8C41-A80988B3FDC5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {708DC568-D40E-4285-BE9D-6D9E9B0992E4}
+	EndGlobalSection
+EndGlobal
